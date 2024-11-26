@@ -14,6 +14,7 @@ namespace Maris_Sorana_Lab5.Data
         {
         }
 
-        public DbSet<Maris_Sorana_Lab5.Models.Expenses> Expenses { get; set; } = default!;
+        public DbSet<Maris_Sorana_Lab5.Models.Expense> Expenses { get; set; } = default!;
+        public DbSet<ExpenseDTO> ExpenseDTO { get; set; }
     }
 }

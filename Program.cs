@@ -3,11 +3,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Maris_Sorana_Lab5.Data;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<Maris_Sorana_Lab5Context>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Maris_Sorana_Lab5Context") ?? throw new InvalidOperationException("Connection string 'Maris_Sorana_Lab5Context' not found.")));
+//builder.Services.AddDbContext<Maris_Sorana_Lab5Context>(options =>
+//  options.UseSqlServer(builder.Configuration.GetConnectionString("Maris_Sorana_Lab5Context") ?? throw new InvalidOperationException("Connection string 'Maris_Sorana_Lab5Context' not found.")));
 
 // Add services to the container.
-//builder.Services.AddDbContext<ExpenseContext>(opt =>opt.UseInMemoryDatabase("ExpenseList"));
+builder.Services.AddDbContext<Maris_Sorana_Lab5Context>(opt =>opt.UseInMemoryDatabase("ExpenseList"));
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
